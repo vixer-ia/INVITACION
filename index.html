@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV - Naomi Xanat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="diseno.css" />
+</head>
+
+<body>
+  <!-- Fondo fijo: degradado + brillos -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__gradient"></div>
+
+    <!-- Brillos (se quedan) -->
+    <div class="bg__sparkles"></div>
+    <div class="bg__glitter"></div>
+  </div>
+
+
+
+
+  <!-- Contenido -->
+  <main class="page">
+    <!-- Marco (secciones) -->
+    <div class="frame" aria-hidden="true">
+      <img class="frame__top" src="imagenes/frame-top.png" alt="">
+      <img class="frame__bottom" src="imagenes/frame-bottom.png" alt="">
+    </div>
+
+    <div class="page__content">
+      <!-- HERO / PORTADA -->
+      <header class="hero section">
+        <div class="hero__card glass">
+          <div class="hero__top">
+            <img src="imagenes/crown.png" class="hero__crown" alt="Corona">
+            <div class="hero__overline">MIS</div>
+            <div class="hero__xv chrome serif">XV</div>
+            <h1 class="hero__name script chrome">Naomi Xanat</h1>
+            <div class="hero__date tracking">18 · ABRIL · 2026</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="hero__phrase">
+            Presiona play y deja que la magia comiece
+          </p>
+
+          <!-- Reproductor -->
+          <div class="player" role="group" aria-label="Reproductor">
+            <button id="playBtn" class="player__btn" type="button" aria-label="Reproducir / Pausar">
+              ▶
+            </button>
+
+            <div class="player__bar">
+              <input id="progress" class="player__range" type="range" min="0" max="100" value="0" aria-label="Progreso" />
+              <div class="player__time">
+                <span id="curTime">0:00</span>
+                <span id="durTime">0:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Audio (pon aquí tu canción) -->
+          <!-- Recomendación: crea /audio/cancion.mp3 -->
+          <audio id="audio" preload="metadata">
+            <source src="audio/Cancion.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </header>
+
+      <!-- MENSAJE + CONTADOR -->
+      <section class="section">
+        <div class="cardWide glass">
+          <h2 class="title serif chrome">La vida está hecha de instantes…</h2>
+          <p class="subtitle">
+            Y uno de los más especiales está por llegar. Me hará muy feliz compartirlo contigo.
+          </p>
+        </div>
+
+        <div class="countdownWrap">
+          <h3 class="countTitle script chrome">¡Tan solo faltan!</h3>
+
+          <div class="countdown glass">
+            <div class="timeBox">
+              <div id="d" class="timeNum chrome serif">00</div>
+              <div class="timeLbl tracking">DÍAS</div>
+            </div>
+            <div class="timeBox">
+              <div id="h" class="timeNum chrome serif">00</div>
+              <div class="timeLbl tracking">HRS</div>
+            </div>
+            <div class="timeBox">
+              <div id="m" class="timeNum chrome serif">00</div>
+              <div class="timeLbl tracking">MIN</div>
+            </div>
+            <div class="timeBox">
+              <div id="s" class="timeNum chrome serif">00</div>
+              <div class="timeLbl tracking">SEG</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUIINCEAÑERA + PADRES -->
+      <section class="section">
+        <div class="blockCenter">
+          <img src="imagenes/fnao.png" class="quince__photo" alt="Naomi XV">
+          <div class="tracking small">QUINCEAÑERA</div>
+          <div class="script chrome bigName">Naomi Xanat Velazco Guerra</div>
+
+          <div class="space"></div>
+
+          <div class="tracking small">Junto a mis padres</div>
+          <div class="parents chrome">
+            <span class="script madre">Arely Guerra</span><br />
+            Y <br />
+            <span class="script madre">Damian Velazco</span>
+          </div>
+
+          <div class="space"></div>
+
+          <p class="text">
+            Para este día tan especial, te invito a acompañarnos en una celebración llena de luz, elegancia y recuerdos.
+          </p>
+        </div>
+      </section>
+
+      <!-- DETALLES -->
+      <section class="section">
+        <h2 class="sectionTitle serif chrome">Detalles del evento</h2>
+
+        <div class="details">
+          <article class="detailCard glass">
+            <!-- ICONO (placeholder) -->
+            <div class="iconSlot">
+              <!-- Cuando tengas el icono, reemplaza por:
+              <img src="imagenes/icono-calendario.png" alt="Calendario" />
+              -->
+              <div class="iconPlaceholder img"><img src="imagenes/calen.png"></div>
+            </div>
+
+            <div class="detailBody">
+              <div class="detailLabel tracking">DÍA</div>
+              <div class="detailText serif chrome">Sábado 18 de abril, 2026</div>
+            </div>
+          </article>
+
+          <article class="detailCard glass">
+            <div class="iconSlot">
+              <!-- placeholder -->
+              <div class="iconPlaceholder img"><img src="imagenes/reloj.png"></div>
+            </div>
+
+            <div class="detailBody">
+              <div class="detailLabel tracking">HORA</div>
+              <div class="detailText serif chrome">7:00 PM</div>
+            </div>
+          </article>
+
+          <article class="detailCard glass detailCard--wide">
+            <div class="iconSlot">
+              <!-- Aquí va el icono de ubicación cuando lo tengas -->
+              <div class="iconPlaceholder img"><img src="imagenes/resin.png"></div>
+            </div>
+
+            <div class="detailBody">
+              <div class="detailLabel tracking">RECINTO</div>
+              <div class="detailText serif chrome">Salón de Eventos "El Cordobés"</div>
+              <a class="link" href="https://maps.app.goo.gl/rmNcvseeDetKkN4MA" target="_blank" rel="noopener">
+                Ver ubicación
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CÓDIGO DE VESTIMENTA -->
+      <section class="section">
+        <h2 class="sectionTitle serif chrome">Código de vestimenta</h2>
+
+        <div class="dressGrid">
+          <div class="dressCard glass">
+            <div class="dressHead">
+              <!-- Espacio para PNG vestido / traje -->
+              <div class="iconSlot iconSlot--big">
+                <!-- reemplaza cuando tengas png -->
+                <div class="iconPlaceholder img"><img src="imagenes/Vesti.png"></div>
+              </div>
+
+              <div>
+                <div class="tracking small">VESTIMENTA</div>
+                <div class="serif chrome dressMain">Formal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dressCard glass">
+            <div class="dressHead">
+              <div>
+                <div class="tracking small">COLORES RESERVADOS</div>
+                <div class="chips">
+                  <span class="chip chip--blue">Azul</span>
+                  <span class="chip chip--silver">Plateado</span>
+                </div>
+              </div>
+              <img src="imagenes/heels.png" class="dressHeels" alt="Tacones XV">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONFIRMACIÓN -->
+      <section class="section">
+        <div class="confirm glass">
+          <h2 class="sectionTitle serif chrome">Confirmación de asistencia</h2>
+          <p class="subtitle">Tenemos sorpresas preparadas desde el primer momento del evento, por lo que te pedimos nos ayudes a confirmar tu asistencia.</p>
+          <p class="not">Con el fin de llevar un mejor control en la entrega de boletos de acceso, la fecha limite para confirmar tu asistencia es el 17 de marzo de 2026.</p>
+
+          <a class="btn" href="https://forms.gle/rHt5FA2jWZcJ7Qa46" target="_blank" rel="noopener">
+            Confirmar en Google Forms
+          </a>
+
+        </div>
+      </section>
+
+      <!-- REGALO -->
+      <section class="section">
+        <h2 class="sectionTitle serif chrome">Regalo</h2>
+        <p class="text">
+          Lo más importante es tu presencia. Si deseas obsequiarme algo, aquí tienes opciones:
+        </p>
+
+        <div class="giftGrid">
+          <div class="giftCard glass">
+            <div class="giftIcon">
+              <!-- Ícono (placeholder) -->
+              <div class="iconPlaceholder img"><img src="imagenes/Regalo.svg"></div>
+            </div>
+            <h3 class="giftTitle serif chrome">Mesa de regalos</h3>
+            <p class="muted">Aquí encontrarás algunos de mis gustos favoritos, elegidos con ilusión.</p>
+            <button class="link linkBtn" type="button" data-modal="gift">Ir a la mesa de regalos</button>
+          </div>
+
+          <div class="giftCard glass">
+            <div class="giftIcon">
+              <div class="iconPlaceholder img"><img src="imagenes/Banco.png"></div>
+            </div>
+            <h3 class="giftTitle serif chrome">Sobre virtual</h3>
+            <p class="muted">Aporta a un sueño, con cariño.</p>
+            <button class="link linkBtn" type="button" data-modal="bank">Ver datos de cuenta</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- HASHTAG + IG -->
+      <footer class="footer section">
+        <div class="footerLine"></div>
+
+        <div class="hash chrome script">MIS XV NAOMI XANAT</div>
+        <div class="ig muted">vixeria</div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- MODAL CENTRADO (Mesa / Depósito) -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal__backdrop" data-close="1"></div>
+
+  <div class="modal__panel glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" type="button" aria-label="Cerrar" data-close="1">✕</button>
+
+    <h3 id="modalTitle" class="modal__title serif chrome">Título</h3>
+
+    <!-- MESA DE REGALOS -->
+    <div class="modal__body" data-view="gift" hidden>
+      <img class="modal__img" src="imagenes/collage-mesa.jpeg" alt="Mesa de regalos">
+    </div>
+
+    <!-- DEPÓSITO -->
+    <div class="modal__body" data-view="bank" hidden>
+      <p class="muted" style="margin-top:0;">Datos para depósito:</p>
+
+      <div class="modal__data">
+        <div><span class="tracking small">Banco</span><br><span class="serif chrome">BBVA</span></div>
+        <div><span class="tracking small">Titular</span><br><span class="serif chrome">Arely Guerra</span></div>
+        <div><span class="tracking small">Cuenta</span><br><span class="serif chrome">151 575 0850</span></div>
+        <div><span class="tracking small">CLABE</span><br><span class="serif chrome">012 180 01515750850 7</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
